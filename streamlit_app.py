@@ -21,9 +21,11 @@ fig.update_layout(
     title='Multiple Line Series Plot',
     xaxis_title='Time',
     yaxis_title='Value',
-    template='plotly_dark'
+    template='plotly_dark',
+    dragmode='pan',  # Enables panning
+    xaxis=dict(rangeslider=dict(visible=True)),  # Enables zooming with range slider
 )
 
 # Streamlit app
 st.title("Plotly Line Chart in Streamlit")
-st.plotly_chart(fig)
+st.plotly_chart(fig, use_container_width=True)
