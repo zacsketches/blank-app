@@ -1,6 +1,7 @@
-import streamlit as st
+python
 
-st.title("🎈 My new app")
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
+import streamlit as st
+import plotly.express as px
+
+fig = px.line(x=[1,2,3], y=[4,5,6])
+st.plotly_chart(fig)
